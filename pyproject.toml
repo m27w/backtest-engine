@@ -1,0 +1,20 @@
+[project]
+name = "backtest-engine"
+version = "0.1.0"
+description = "Event-driven backtesting engine with realistic fills, risk metrics and walk-forward analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Matthew Wright" }]
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+backtest = "backtest.__main__:main"
+
+[tool.setuptools]
+packages = ["backtest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
